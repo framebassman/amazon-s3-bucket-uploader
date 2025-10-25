@@ -8,7 +8,7 @@ import { Variables } from './consts';
 const { log } = Apify.utils;
 
 Apify.main(async () => {
-    const { bucketName, region, accessKeyId, secretAccessKey, actorRunId, pathName, fileName, separateItems } = (await Apify.getInput()) as Input;
+    const { bucketName, region, endpoint, accessKeyId, secretAccessKey, actorRunId, pathName, fileName, separateItems } = (await Apify.getInput()) as Input;
 
     // If the user has chosen to upload separate items but isn't using unique variables in the,
     // fileName, warn them and tell them the consequences.
@@ -34,7 +34,7 @@ Apify.main(async () => {
             accessKeyId: accessKeyId.trim(),
             secretAccessKey: secretAccessKey.trim(),
         },
-        region,
+        ...(endpoint ? { endpoint } : { region }),
         apiVersion: '2006-03-01',
     });
 

@@ -12,6 +12,14 @@
             "sectionCaption": "Bucket configuration",
             "example": "my-bucket-name"
         },
+        "endpoint": {
+            "title": "Custom endpoint",
+            "type": "string",
+            "description": "The endpoint to override.",
+            "editor": "textfield",
+            "sectionCaption": "Endpoint to override",
+            "example": "https://xxx.r2.cloudflarestorage.com/"
+        },
         "region": {
             "title": "Bucket region",
             "type": "string",
