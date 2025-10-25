@@ -1,5 +1,6 @@
 export interface Input {
     bucketName: string;
+    endpoint: string;
     region: string;
     accessKeyId: string;
     secretAccessKey: string;
