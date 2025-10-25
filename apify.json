@@ -1,5 +1,5 @@
 {
-	"name": "s3-bucket-uploader",
+	"name": "framebassman-s3-bucket-uploader",
 	"version": "0.0",
 	"buildTag": "latest",
 	"env": null,
